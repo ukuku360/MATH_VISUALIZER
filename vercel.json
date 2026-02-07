@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd \"MAST30020/1.Probability Spaces\" && npm install && npm run build",
+  "outputDirectory": "MAST30020/1.Probability Spaces/dist",
+  "framework": "vite"
+}
