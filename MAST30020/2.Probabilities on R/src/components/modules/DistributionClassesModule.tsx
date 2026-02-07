@@ -135,7 +135,7 @@ export const DistributionClassesModule: React.FC = () => {
   return (
     <ModuleWrapper
       title="Distribution Classes and Decomposition"
-      katexTitle="\alpha_d,\alpha_a,\alpha_s"
+      katexTitle="\\alpha_d,\\alpha_a,\\alpha_s"
       subtitle="Discrete, absolutely continuous, mixed, singular, and Lebesgue decomposition"
     >
       <div className="space-y-8">
