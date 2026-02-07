@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
 import { InlineMath, BlockMath } from 'react-katex';
 import { ModuleWrapper } from '../layout/ModuleWrapper';
@@ -29,15 +29,15 @@ export const CdfFoundationsModule: React.FC = () => {
   const [ex2Answer, setEx2Answer] = useState('');
   const [ex2Status, setEx2Status] = useState<ExerciseStatus>('unattempted');
 
-  const cdf = useMemo(() => {
+  const cdf = (x: number) => {
     if (distribution === 'point-mass') {
-      return (x: number) => pointMassCdf(x, s);
+      return pointMassCdf(x, s);
     }
     if (distribution === 'bernoulli') {
-      return (x: number) => bernoulliMixCdf(x, p);
+      return bernoulliMixCdf(x, p);
     }
-    return (x: number) => uniformCdf(x, 0, 1);
-  }, [distribution, s, p]);
+    return uniformCdf(x, 0, 1);
+  };
 
   const fOfT = cdf(t);
 
@@ -52,7 +52,7 @@ export const CdfFoundationsModule: React.FC = () => {
           <h4 className="font-bold mb-3">Lecture Decomposition</h4>
           <ol className="list-decimal list-inside space-y-1 opacity-90">
             <li>Always work on <InlineMath math="(\\mathbb{R},\\mathcal{B}(\\mathbb{R}))" />.</li>
-            <li>Define <InlineMath math="F_P(t)=P(( -\\infty,t])" />.</li>
+            <li>Define <InlineMath math="F_P(t)=P((-\\infty,t])" />.</li>
             <li>Use <InlineMath math="P" /> for probabilities on <InlineMath math="\\mathbb{R}" /> and reserve <InlineMath math="\\mathbb{P}" /> for underlying spaces.</li>
             <li>Even though <InlineMath math="\\mathcal{B}(\\mathbb{R})" /> is huge, CDF data is enough.</li>
           </ol>
@@ -62,7 +62,7 @@ export const CdfFoundationsModule: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold text-gray-800 mb-2">CDF Explorer</h3>
             <p className="text-sm text-gray-500">
-              Pick a distribution and inspect <InlineMath math="F(t)=P(( -\\infty,t])" /> at a moving threshold.
+              Pick a distribution and inspect <InlineMath math="F(t)=P((-\\infty,t])" /> at a moving threshold.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export const CdfFoundationsModule: React.FC = () => {
 
               <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
                 <div className="text-xs uppercase text-indigo-500 font-semibold mb-1">Computed value</div>
-                <InlineMath math={`F(t)=P(( -\\infty,t])=${fOfT.toFixed(4)}`} />
+                <InlineMath math={`F(t)=P((-\\infty,t])=${fOfT.toFixed(4)}`} />
               </div>
 
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-600">
@@ -148,7 +148,7 @@ export const CdfFoundationsModule: React.FC = () => {
                   <BlockMath math={`F(t)=(1-${p.toFixed(2)})\\mathbf{1}(0\\le t)+${p.toFixed(2)}\\mathbf{1}(1\\le t)`} />
                 )}
                 {distribution === 'uniform' && (
-                  <BlockMath math="F(t)=0\ \text{if }t<0,\ \ F(t)=t\ \text{if }0\le t<1,\ \ F(t)=1\ \text{if }t\ge 1" />
+                  <BlockMath math="F(t)=0\\ \\text{if }t<0,\\quad F(t)=t\\ \\text{if }0\\le t<1,\\quad F(t)=1\\ \\text{if }t\\ge 1" />
                 )}
               </div>
             </div>

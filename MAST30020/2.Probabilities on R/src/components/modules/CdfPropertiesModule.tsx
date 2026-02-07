@@ -125,7 +125,7 @@ export const CdfPropertiesModule: React.FC = () => {
           <ul className="list-disc list-inside space-y-1 opacity-90">
             <li><InlineMath math="s<t\\Rightarrow F(s)\\le F(t)" /> (non-decreasing)</li>
             <li><InlineMath math="F(t)=F(t+)" /> (right-continuous)</li>
-            <li><InlineMath math="\\lim_{t\\to-\\infty}F(t)=0,\ \lim_{t\\to+\\infty}F(t)=1" /></li>
+            <li><InlineMath math="\\lim_{t\\to-\\infty}F(t)=0,\\quad \\lim_{t\\to+\\infty}F(t)=1" /></li>
           </ul>
         </section>
 
@@ -188,7 +188,7 @@ export const CdfPropertiesModule: React.FC = () => {
 
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm">
                 <div className="font-semibold text-gray-700 mb-1">One-sided values near t</div>
-                <BlockMath math={`F(t-)= ${diagnostics.left.toFixed(3)},\quad F(t)= ${diagnostics.mid.toFixed(3)},\quad F(t+)= ${diagnostics.right.toFixed(3)}`} />
+                <BlockMath math={`F(t-)= ${diagnostics.left.toFixed(3)},\\quad F(t)= ${diagnostics.mid.toFixed(3)},\\quad F(t+)= ${diagnostics.right.toFixed(3)}`} />
                 <div className={clsx('font-semibold', isValidCdf ? 'text-green-700' : 'text-amber-700')}>
                   {isValidCdf ? 'Current candidate satisfies all checks at this probe.' : 'At least one requirement fails.'}
                 </div>

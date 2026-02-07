@@ -140,7 +140,7 @@ export const AtomsAndJumpsModule: React.FC = () => {
           <h3 className="text-lg font-bold text-gray-800">Jump = Point Mass Inspector</h3>
           <p className="text-sm text-gray-500">
             Use a custom atomic law and verify the lecture formula
-            <InlineMath math="\ \ P(\\{t\\})=F(t)-F(t-)" />.
+            <InlineMath math="P(\\{t\\})=F(t)-F(t-)" />.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
