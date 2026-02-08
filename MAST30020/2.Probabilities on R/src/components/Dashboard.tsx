@@ -5,6 +5,7 @@ import { CdfPropertiesModule } from './modules/CdfPropertiesModule';
 import { AtomsAndJumpsModule } from './modules/AtomsAndJumpsModule';
 import { ConstructionUniquenessModule } from './modules/ConstructionUniquenessModule';
 import { DistributionClassesModule } from './modules/DistributionClassesModule';
+import { CantorSingularModule } from './modules/CantorSingularModule';
 import type { ModuleId } from '../types';
 
 export const Dashboard: React.FC = () => {
@@ -22,6 +23,8 @@ export const Dashboard: React.FC = () => {
         return <ConstructionUniquenessModule />;
       case 'distribution-classes':
         return <DistributionClassesModule />;
+      case 'cantor-singular':
+        return <CantorSingularModule />;
     }
   };
 

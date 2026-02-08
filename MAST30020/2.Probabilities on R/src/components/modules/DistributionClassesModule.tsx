@@ -5,6 +5,7 @@ import { ModuleWrapper } from '../layout/ModuleWrapper';
 import { ExerciseCard } from '../shared/ExerciseCard';
 import { CdfPlot } from '../shared/CdfPlot';
 import { atmWaitingCdf, uniformCdf } from '../../utils/cdfUtils';
+import { cantorApprox } from '../../utils/cantorUtils';
 import type { ExerciseStatus } from '../../types';
 
 type DistClass = 'discrete' | 'ac' | 'mixed' | 'singular';
@@ -18,35 +19,6 @@ interface DistPreset {
   hasDensity: boolean;
   continuousCdf: boolean;
 }
-
-const cantorApprox = (x: number, depth = 14): number => {
-  if (x <= 0) return 0;
-  if (x >= 1) return 1;
-
-  let value = 0;
-  let scale = 1;
-  let current = x;
-
-  for (let i = 0; i < depth; i++) {
-    current *= 3;
-    scale /= 2;
-
-    if (current < 1) {
-      continue;
-    }
-
-    if (current > 2) {
-      value += scale;
-      current -= 2;
-      continue;
-    }
-
-    value += scale;
-    break;
-  }
-
-  return value;
-};
 
 const PRESETS: DistPreset[] = [
   {

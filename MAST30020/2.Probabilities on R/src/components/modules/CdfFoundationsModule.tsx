@@ -51,11 +51,15 @@ export const CdfFoundationsModule: React.FC = () => {
         <section className="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800">
           <h4 className="font-bold mb-3">Lecture Decomposition</h4>
           <ol className="list-decimal list-inside space-y-1 opacity-90">
-            <li>Always work on <InlineMath math="(\\mathbb{R},\\mathcal{B}(\\mathbb{R}))" />.</li>
-            <li>Define <InlineMath math="F_P(t)=P((-\\infty,t])" />.</li>
+            <li>Always work on the measurable space of real numbers.</li>
+            <li>Define probability on left rays via the CDF.</li>
             <li>Use <InlineMath math="P" /> for probabilities on <InlineMath math="\\mathbb{R}" /> and reserve <InlineMath math="\\mathbb{P}" /> for underlying spaces.</li>
             <li>Even though <InlineMath math="\\mathcal{B}(\\mathbb{R})" /> is huge, CDF data is enough.</li>
           </ol>
+          <div className="mt-3 space-y-1 bg-white/60 rounded-lg border border-blue-100 p-3">
+            <BlockMath math="(\\mathbb{R},\\mathcal{B}(\\mathbb{R}))" />
+            <BlockMath math="F_P(t)=P((-\\infty,t])" />
+          </div>
         </section>
 
         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-5">

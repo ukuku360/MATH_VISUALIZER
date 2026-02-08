@@ -206,7 +206,13 @@ export const AtomsAndJumpsModule: React.FC = () => {
 
           <ExerciseCard
             title="E2.5: Jump at zero"
-            description={<>For <InlineMath math="P=(1-p)\\delta_0+p\\delta_1" />, what is <InlineMath math="P(\\{0\\})" />?</>}
+            description={
+              <div className="space-y-1">
+                <div>For</div>
+                <BlockMath math="P=(1-p)\\delta_0+p\\delta_1" />
+                <div>what is <InlineMath math="P(\\{0\\})" />?</div>
+              </div>
+            }
             status={ex1Status}
             feedback={
               ex1Status === 'correct'

@@ -14,7 +14,7 @@ const MODULES: ModuleConfig[] = [
     id: 'cdf-properties',
     title: 'CDF Properties',
     subtitle: 'Monotone, right-continuous, and tail limits',
-    katexSymbol: 'F(t-) \\le F(t)=F(t+) ',
+    katexSymbol: 'F(t-) \\le F(t)=F(t+)',
   },
   {
     id: 'atoms-jumps',
@@ -33,6 +33,12 @@ const MODULES: ModuleConfig[] = [
     title: 'Distribution Classes',
     subtitle: 'Discrete, AC, mixed, singular, decomposition',
     katexSymbol: 'P=\\alpha_dP_d+\\alpha_aP_a+\\alpha_sP_s',
+  },
+  {
+    id: 'cantor-singular',
+    title: 'Cantor & Singular',
+    subtitle: "Devil's Staircase, Lebesgue decomposition",
+    katexSymbol: "F'=0\\text{ a.e.},\\;\\int F'\\neq 1",
   },
 ];
 

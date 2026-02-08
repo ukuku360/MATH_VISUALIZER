@@ -3,7 +3,8 @@ export type ModuleId =
   | 'cdf-properties'
   | 'atoms-jumps'
   | 'cdf-construction'
-  | 'distribution-classes';
+  | 'distribution-classes'
+  | 'cantor-singular';
 
 export interface ModuleConfig {
   id: ModuleId;
