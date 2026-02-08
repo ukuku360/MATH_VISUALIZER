@@ -53,12 +53,12 @@ export const CdfFoundationsModule: React.FC = () => {
           <ol className="list-decimal list-inside space-y-1 opacity-90">
             <li>Always work on the measurable space of real numbers.</li>
             <li>Define probability on left rays via the CDF.</li>
-            <li>Use <InlineMath math="P" /> for probabilities on <InlineMath math="\\mathbb{R}" /> and reserve <InlineMath math="\\mathbb{P}" /> for underlying spaces.</li>
-            <li>Even though <InlineMath math="\\mathcal{B}(\\mathbb{R})" /> is huge, CDF data is enough.</li>
+            <li>Use <InlineMath math="P" /> for probabilities on <InlineMath math="\mathbb{R}" /> and reserve <InlineMath math="\mathbb{P}" /> for underlying spaces.</li>
+            <li>Even though <InlineMath math="\mathcal{B}(\mathbb{R})" /> is huge, CDF data is enough.</li>
           </ol>
           <div className="mt-3 space-y-1 bg-white/60 rounded-lg border border-blue-100 p-3">
-            <BlockMath math="(\\mathbb{R},\\mathcal{B}(\\mathbb{R}))" />
-            <BlockMath math="F_P(t)=P((-\\infty,t])" />
+            <BlockMath math="(\mathbb{R},\mathcal{B}(\mathbb{R}))" />
+            <BlockMath math="F_P(t)=P((-\infty,t])" />
           </div>
         </section>
 
@@ -66,7 +66,7 @@ export const CdfFoundationsModule: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold text-gray-800 mb-2">CDF Explorer</h3>
             <p className="text-sm text-gray-500">
-              Pick a distribution and inspect <InlineMath math="F(t)=P((-\\infty,t])" /> at a moving threshold.
+              Pick a distribution and inspect <InlineMath math="F(t)=P((-\infty,t])" /> at a moving threshold.
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export const CdfFoundationsModule: React.FC = () => {
                   <BlockMath math={`F(t)=(1-${p.toFixed(2)})\\mathbf{1}(0\\le t)+${p.toFixed(2)}\\mathbf{1}(1\\le t)`} />
                 )}
                 {distribution === 'uniform' && (
-                  <BlockMath math="F(t)=0\\ \\text{if }t<0,\\quad F(t)=t\\ \\text{if }0\\le t<1,\\quad F(t)=1\\ \\text{if }t\\ge 1" />
+                  <BlockMath math="F(t)=0\ \text{if }t<0,\quad F(t)=t\ \text{if }0\le t<1,\quad F(t)=1\ \text{if }t\ge 1" />
                 )}
               </div>
             </div>
@@ -166,9 +166,9 @@ export const CdfFoundationsModule: React.FC = () => {
           <p className="text-sm text-gray-600 mb-3">
             Instead of assigning values to every Borel set directly, it is enough to know all left-ray probabilities.
           </p>
-          <BlockMath math="\\sigma\\{(-\\infty,t]: t\\in\\mathbb{R}\\}=\\mathcal{B}(\\mathbb{R})" />
+          <BlockMath math="\sigma\{(-\infty,t]: t\in\mathbb{R}\}=\mathcal{B}(\mathbb{R})" />
           <p className="text-sm text-gray-600 mt-2">
-            So once two probabilities agree on every <InlineMath math="(-\\infty,t]" />, they agree on all Borel sets.
+            So once two probabilities agree on every <InlineMath math="(-\infty,t]" />, they agree on all Borel sets.
           </p>
         </section>
 
@@ -177,7 +177,7 @@ export const CdfFoundationsModule: React.FC = () => {
 
           <ExerciseCard
             title="E2.1: Key generator"
-            description={<>Which class generates <InlineMath math="\\mathcal{B}(\\mathbb{R})" /> in this lecture?</>}
+            description={<>Which class generates <InlineMath math="\mathcal{B}(\mathbb{R})" /> in this lecture?</>}
             status={ex1Status}
             feedback={
               ex1Status === 'correct'
@@ -221,7 +221,7 @@ export const CdfFoundationsModule: React.FC = () => {
 
           <ExerciseCard
             title="E2.2: Evaluate a Bernoulli CDF"
-            description={<>For <InlineMath math="P=(1-p)\\delta_0+p\\delta_1" /> with <InlineMath math="p=0.3" />, compute <InlineMath math="F(0.5)" />.</>}
+            description={<>For <InlineMath math="P=(1-p)\delta_0+p\delta_1" /> with <InlineMath math="p=0.3" />, compute <InlineMath math="F(0.5)" />.</>}
             status={ex2Status}
             feedback={
               ex2Status === 'correct'

@@ -50,7 +50,7 @@ export const ConstructionUniquenessModule: React.FC = () => {
   return (
     <ModuleWrapper
       title="Constructing P from F"
-      katexTitle="\\text{Thm 1.36}"
+      katexTitle="\text{Thm 1.36}"
       subtitle="Any valid CDF defines a unique probability on B(R)"
     >
       <div className="space-y-8">
@@ -60,14 +60,14 @@ export const ConstructionUniquenessModule: React.FC = () => {
             <li>Start with <InlineMath math="P((a,b]) := F(b)-F(a)" /> for all <InlineMath math="a<b" />.</li>
             <li>Extend to finite disjoint unions of half-open intervals (an algebra).</li>
             <li>Use countable additivity + Caratheodory extension theorem.</li>
-            <li>Obtain a unique probability on <InlineMath math="\\mathcal{B}(\\mathbb{R})" /> with CDF <InlineMath math="F" />.</li>
+            <li>Obtain a unique probability on <InlineMath math="\mathcal{B}(\mathbb{R})" /> with CDF <InlineMath math="F" />.</li>
           </ol>
         </section>
 
         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-5">
           <h3 className="text-lg font-bold text-gray-800">Interval Probability Calculator</h3>
           <p className="text-sm text-gray-500">
-            Choose a uniform law <InlineMath math="U[a,b]" /> and compute <InlineMath math="P((\\ell,r])" /> via CDF differences.
+            Choose a uniform law <InlineMath math="U[a,b]" /> and compute <InlineMath math="P((\ell,r])" /> via CDF differences.
           </p>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
@@ -100,7 +100,7 @@ export const ConstructionUniquenessModule: React.FC = () => {
 
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm space-y-1">
                 <div><InlineMath math={`a=${normalizedLeft.toFixed(2)},\\ b=${normalizedRight.toFixed(2)}`} /></div>
-                <BlockMath math="F(t)=0\\ \\text{if }t<a,\\quad F(t)=\\frac{t-a}{b-a}\\ \\text{if }a\\le t<b,\\quad F(t)=1\\ \\text{if }t\\ge b" />
+                <BlockMath math="F(t)=0\ \text{if }t<a,\quad F(t)=\frac{t-a}{b-a}\ \text{if }a\le t<b,\quad F(t)=1\ \text{if }t\ge b" />
               </div>
 
               <div>
@@ -157,9 +157,9 @@ export const ConstructionUniquenessModule: React.FC = () => {
 
         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
           <h3 className="text-lg font-bold text-gray-800 mb-2">Uniform Example from the Lecture</h3>
-          <BlockMath math="F(t)=\\begin{cases}0,&t<0\\\\ t,&0\\le t<1\\\\ 1,&t\\ge1\\end{cases}" />
+          <BlockMath math="F(t)=\begin{cases}0,&t<0\\ t,&0\le t<1\\ 1,&t\ge1\end{cases}" />
           <p className="text-sm text-gray-600">
-            This is the CDF of <InlineMath math="U[0,1]" />, and by Theorem 1.36 it defines a unique probability on <InlineMath math="\\mathbb{R}" />.
+            This is the CDF of <InlineMath math="U[0,1]" />, and by Theorem 1.36 it defines a unique probability on <InlineMath math="\mathbb{R}" />.
           </p>
         </section>
 

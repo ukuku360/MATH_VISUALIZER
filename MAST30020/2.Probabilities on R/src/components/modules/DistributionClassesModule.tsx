@@ -107,7 +107,7 @@ export const DistributionClassesModule: React.FC = () => {
   return (
     <ModuleWrapper
       title="Distribution Classes and Decomposition"
-      katexTitle="\\alpha_d,\\alpha_a,\\alpha_s"
+      katexTitle="\alpha_d,\alpha_a,\alpha_s"
       subtitle="Discrete, absolutely continuous, mixed, singular, and Lebesgue decomposition"
     >
       <div className="space-y-8">
@@ -170,7 +170,7 @@ export const DistributionClassesModule: React.FC = () => {
         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-4">
           <h3 className="text-lg font-bold text-gray-800">ATM Waiting-Time Mixed Model</h3>
           <p className="text-sm text-gray-500">
-            Lecture example: <InlineMath math="P=p\\delta_0+(1-p)E(\\lambda)" />.
+            Lecture example: <InlineMath math="P=p\delta_0+(1-p)E(\lambda)" />.
           </p>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
@@ -199,7 +199,7 @@ export const DistributionClassesModule: React.FC = () => {
 
         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 space-y-4">
           <h3 className="text-lg font-bold text-gray-800">Lebesgue Decomposition Mixer</h3>
-          <BlockMath math="P=\\alpha_dP_d+\\alpha_aP_a+\\alpha_sP_s,\\quad \\alpha_d+\\alpha_a+\\alpha_s=1" />
+          <BlockMath math="P=\alpha_dP_d+\alpha_aP_a+\alpha_sP_s,\quad \alpha_d+\alpha_a+\alpha_s=1" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>

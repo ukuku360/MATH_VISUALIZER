@@ -124,13 +124,13 @@ export const CdfPropertiesModule: React.FC = () => {
           <h4 className="font-bold mb-2">Theorem 1.33 Checklist</h4>
           <div className="space-y-2 opacity-90">
             <div className="bg-white/60 rounded-lg border border-blue-100 p-2">
-              <BlockMath math="s<t\\Rightarrow F(s)\\le F(t)" />
+              <BlockMath math="s<t\Rightarrow F(s)\le F(t)" />
             </div>
             <div className="bg-white/60 rounded-lg border border-blue-100 p-2">
               <BlockMath math="F(t)=F(t+)" />
             </div>
             <div className="bg-white/60 rounded-lg border border-blue-100 p-2">
-              <BlockMath math="\\lim_{t\\to-\\infty}F(t)=0,\\quad \\lim_{t\\to+\\infty}F(t)=1" />
+              <BlockMath math="\lim_{t\to-\infty}F(t)=0,\quad \lim_{t\to+\infty}F(t)=1" />
             </div>
           </div>
         </section>
