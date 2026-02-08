@@ -28,7 +28,7 @@ export const CantorSingularModule: React.FC = () => {
   return (
     <ModuleWrapper
       title="Cantor Set & Singular Distributions"
-      katexTitle="F'=0\text{ a.e.}"
+      katexTitle="F'=0\\text{ a.e.}"
       subtitle="Devil's Staircase, singular continuous distributions, and Lebesgue decomposition"
     >
       <div className="space-y-8">
@@ -37,10 +37,10 @@ export const CantorSingularModule: React.FC = () => {
           <h4 className="font-bold text-base">Georg Cantor (1845 - 1918)</h4>
           <p>
             Georg Cantor는 <strong>집합론(Set Theory)</strong>을 만든 수학자야.
-            무한에도 크기가 다르다는 걸 증명했어 &mdash; 자연수(<InlineMath math="\mathbb{N}" />)는 셀 수 있지만
-            실수(<InlineMath math="\mathbb{R}" />)는 셀 수 없다는 걸 대각선 논법으로 보였지.
+            무한에도 크기가 다르다는 걸 증명했어 &mdash; 자연수(<InlineMath math="\\mathbb{N}" />)는 셀 수 있지만
+            실수(<InlineMath math="\\mathbb{R}" />)는 셀 수 없다는 걸 대각선 논법으로 보였지.
           </p>
-          <BlockMath math="|\mathbb{R}| > |\mathbb{N}|" />
+          <BlockMath math="|\\mathbb{R}| > |\\mathbb{N}|" />
           <p>
             확률론에서 Cantor가 등장하는 이유: <strong>"연속인데 밀도가 없는 분포"</strong>가
             실제로 존재한다는 걸 보여주는 <em>반례 머신</em>이거든.
@@ -61,7 +61,7 @@ export const CantorSingularModule: React.FC = () => {
             <p><strong>알고리즘:</strong></p>
             <ol className="list-decimal list-inside space-y-1 text-xs opacity-90">
               <li>Start: <InlineMath math="[0,1]" /></li>
-              <li>Step 1: 가운데 1/3 제거 → <InlineMath math="[0,\tfrac{1}{3}]\cup[\tfrac{2}{3},1]" /></li>
+              <li>Step 1: 가운데 1/3 제거 → <InlineMath math="[0,\\tfrac{1}{3}]\\cup[\\tfrac{2}{3},1]" /></li>
               <li>Step 2: 남은 각 구간의 가운데 1/3 제거</li>
               <li>Step n: 무한히 반복. 끝까지 살아남는 점 = <strong>Cantor set</strong> <InlineMath math="C" /></li>
             </ol>
@@ -73,18 +73,18 @@ export const CantorSingularModule: React.FC = () => {
             <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200 text-sm text-indigo-800">
               <div className="font-bold mb-1">Key Insight 1</div>
               <p>
-                제거한 총 길이: <InlineMath math="\sum_{n=0}^{\infty}\frac{2^n}{3^{n+1}} = 1" />.
+                제거한 총 길이: <InlineMath math="\\sum_{n=0}^{\\infty}\\frac{2^n}{3^{n+1}} = 1" />.
                 즉 <InlineMath math="[0,1]" />의 길이를 <strong>전부 제거</strong>했으므로
                 Cantor set의 <strong>르벡 측도(길이) = 0</strong>.
               </p>
-              <BlockMath math="\lambda(C) = 0" />
+              <BlockMath math="\\lambda(C) = 0" />
             </div>
             <div className="bg-amber-50 p-4 rounded-lg border border-amber-200 text-sm text-amber-800">
               <div className="font-bold mb-1">Key Insight 2</div>
               <p>
                 그런데 <InlineMath math="C" />에 속하는 점은 <strong>uncountably 많아</strong>.
                 3진수 전개에서 숫자 1을 안 쓰는 실수들의 집합이라서,
-                <InlineMath math="|C| = |\mathbb{R}|" /> (같은 크기의 무한).
+                <InlineMath math="|C| = |\\mathbb{R}|" /> (같은 크기의 무한).
               </p>
               <p className="mt-1 text-xs">길이는 0인데 점은 셀 수 없이 많은 이상한 집합!</p>
             </div>
@@ -146,15 +146,15 @@ export const CantorSingularModule: React.FC = () => {
                 <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-700 space-y-2">
                   <p className="font-semibold">3진수 → 2진수 변환</p>
                   <p>
-                    <InlineMath math="x \in [0,1]" />을 3진수로 쓴다:
-                    <InlineMath math="x = 0.a_1a_2a_3\ldots" /> (base 3).
+                    <InlineMath math="x \\in [0,1]" />을 3진수로 쓴다:
+                    <InlineMath math="x = 0.a_1a_2a_3\\ldots" /> (base 3).
                   </p>
                   <p>
-                    Cantor set의 점은 <InlineMath math="a_k \in \{0, 2\}" />만 사용.
+                    Cantor set의 점은 <InlineMath math="a_k \\in \\{0, 2\\}" />만 사용.
                     각 <InlineMath math="2" />를 <InlineMath math="1" />로 바꾸고 2진수로 해석하면
                     <InlineMath math="F(x)" />.
                   </p>
-                  <BlockMath math="0.020200\ldots_{(3)} \to 0.010100\ldots_{(2)}" />
+                  <BlockMath math="0.020200\\ldots_{(3)} \\to 0.010100\\ldots_{(2)}" />
                   <p className="text-xs text-gray-500">
                     결과적으로 삭제된 구간(가운데 1/3)에서는 F가 상수(평평)이고,
                     Cantor set 위에서만 조금씩 올라감.
@@ -191,7 +191,7 @@ export const CantorSingularModule: React.FC = () => {
 
           <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
             <h4 className="text-sm font-bold text-indigo-700 mb-2">Lebesgue Decomposition Theorem</h4>
-            <BlockMath math="P = \alpha_d P_d + \alpha_a P_a + \alpha_s P_s, \quad \alpha_d + \alpha_a + \alpha_s = 1" />
+            <BlockMath math="P = \\alpha_d P_d + \\alpha_a P_a + \\alpha_s P_s, \\quad \\alpha_d + \\alpha_a + \\alpha_s = 1" />
             <p className="text-sm text-indigo-800 mt-2">
               <strong>모든</strong> 확률분포는 이 세 가지 순수 타입의 혼합으로 <strong>유일하게</strong> 분해된다.
               어떤 이상한 분포가 나와도 "너 사실 셋 섞은 거잖아"로 정리 가능!
@@ -207,10 +207,10 @@ export const CantorSingularModule: React.FC = () => {
               <strong>Singular</strong>: CDF는 연속(점질량 0)인데, pdf가 없는 분포
             </li>
             <li>
-              <strong>연속 CDF</strong> <InlineMath math="\Rightarrow" /> 점확률 0 (점프 없으니까)
+              <strong>연속 CDF</strong> <InlineMath math="\\Rightarrow" /> 점확률 0 (점프 없으니까)
             </li>
             <li>
-              <strong>연속 CDF</strong> <InlineMath math="\not\Rightarrow" /> pdf 존재 (Cantor가 반례)
+              <strong>연속 CDF</strong> <InlineMath math="\\not\\Rightarrow" /> pdf 존재 (Cantor가 반례)
             </li>
             <li>
               모든 분포 = <strong>discrete + AC + singular</strong>의 유일한 혼합
@@ -219,7 +219,7 @@ export const CantorSingularModule: React.FC = () => {
               Cantor function: <InlineMath math="F'=0" /> a.e. but <InlineMath math="F(1)-F(0)=1" />
             </li>
           </ul>
-          <BlockMath math="\underbrace{\int_0^1 F'(x)\,dx = 0}_{\text{if AC}} \neq \underbrace{F(1)-F(0) = 1}_{\text{actual}} \implies \text{not AC}" />
+          <BlockMath math="\\underbrace{\\int_0^1 F'(x)\\,dx = 0}_{\\text{if AC}} \\neq \\underbrace{F(1)-F(0) = 1}_{\\text{actual}} \\implies \\text{not AC}" />
         </section>
 
         {/* Section 7: Exercises */}
@@ -228,7 +228,7 @@ export const CantorSingularModule: React.FC = () => {
 
           <ExerciseCard
             title="E3.1: Cantor set measure"
-            description={<>Cantor set <InlineMath math="C" />의 Lebesgue measure <InlineMath math="\lambda(C)" />는?</>}
+            description={<>Cantor set <InlineMath math="C" />의 Lebesgue measure <InlineMath math="\\lambda(C)" />는?</>}
             status={ex1Status}
             feedback={
               ex1Status === 'correct'
@@ -342,7 +342,7 @@ export const CantorSingularModule: React.FC = () => {
 
           <ExerciseCard
             title="E3.4: Lebesgue decomposition"
-            description={<>Lebesgue decomposition <InlineMath math="P=\alpha_dP_d+\alpha_aP_a+\alpha_sP_s" />는 유일한가?</>}
+            description={<>Lebesgue decomposition <InlineMath math="P=\\alpha_dP_d+\\alpha_aP_a+\\alpha_sP_s" />는 유일한가?</>}
             status={ex4Status}
             feedback={
               ex4Status === 'correct'

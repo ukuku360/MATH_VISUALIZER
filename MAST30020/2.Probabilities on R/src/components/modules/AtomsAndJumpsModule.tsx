@@ -71,7 +71,7 @@ export const AtomsAndJumpsModule: React.FC = () => {
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
             <div className="space-y-4">
-              <h4 className="font-semibold text-gray-700">Point mass <InlineMath math="\delta_s" /></h4>
+              <h4 className="font-semibold text-gray-700">Point mass <InlineMath math="\\delta_s" /></h4>
               <input
                 type="range"
                 min={-1.5}
@@ -102,7 +102,7 @@ export const AtomsAndJumpsModule: React.FC = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-semibold text-gray-700">Bernoulli mixture <InlineMath math="(1-p)\delta_0 + p\delta_1" /></h4>
+              <h4 className="font-semibold text-gray-700">Bernoulli mixture <InlineMath math="(1-p)\\delta_0 + p\\delta_1" /></h4>
               <input
                 type="range"
                 min={0}
@@ -140,7 +140,7 @@ export const AtomsAndJumpsModule: React.FC = () => {
           <h3 className="text-lg font-bold text-gray-800">Jump = Point Mass Inspector</h3>
           <p className="text-sm text-gray-500">
             Use a custom atomic law and verify the lecture formula
-            <InlineMath math="P(\{t\})=F(t)-F(t-)" />.
+            <InlineMath math="P(\\{t\\})=F(t)-F(t-)" />.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -209,8 +209,8 @@ export const AtomsAndJumpsModule: React.FC = () => {
             description={
               <div className="space-y-1">
                 <div>For</div>
-                <BlockMath math="P=(1-p)\delta_0+p\delta_1" />
-                <div>what is <InlineMath math="P(\{0\})" />?</div>
+                <BlockMath math="P=(1-p)\\delta_0+p\\delta_1" />
+                <div>what is <InlineMath math="P(\\{0\\})" />?</div>
               </div>
             }
             status={ex1Status}
@@ -256,7 +256,7 @@ export const AtomsAndJumpsModule: React.FC = () => {
 
           <ExerciseCard
             title="E2.6: Continuous CDF and atoms"
-            description={<>If <InlineMath math="F" /> is continuous at <InlineMath math="t" />, what is <InlineMath math="P(\{t\})" />?</>}
+            description={<>If <InlineMath math="F" /> is continuous at <InlineMath math="t" />, what is <InlineMath math="P(\\{t\\})" />?</>}
             status={ex2Status}
             feedback={
               ex2Status === 'correct'

@@ -46,9 +46,9 @@ const Step1Visual: React.FC = () => {
       </svg>
       <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 text-sm text-blue-800">
         <InlineMath math="F" /> is continuous everywhere. By the jump formula{' '}
-        <InlineMath math="P(\{t\}) = F(t) - F(t^-)" />, every point has probability 0.
+        <InlineMath math="P(\\{t\\}) = F(t) - F(t^-)" />, every point has probability 0.
       </div>
-      <BlockMath math="F\text{ continuous} \Longrightarrow P(\{t\}) = 0\text{ for all }t" />
+      <BlockMath math="F\\text{ continuous} \\Longrightarrow P(\\{t\\}) = 0\\text{ for all }t" />
     </div>
   );
 };
@@ -90,9 +90,9 @@ const Step2Visual: React.FC = () => {
       <div className="bg-amber-50 p-3 rounded-lg border border-amber-100 text-sm text-amber-800">
         Yellow = flat regions where <InlineMath math="F'(x) = 0" />.
         These cover <strong>{(flatMeasure * 100).toFixed(1)}%</strong> of [0,1] (at depth 6).
-        As depth <InlineMath math="\to \infty" />, this approaches <strong>100%</strong>.
+        As depth <InlineMath math="\\to \\infty" />, this approaches <strong>100%</strong>.
       </div>
-      <BlockMath math="F'(x) = 0 \quad\text{for almost every } x \in [0,1]" />
+      <BlockMath math="F'(x) = 0 \\quad\\text{for almost every } x \\in [0,1]" />
     </div>
   );
 };
@@ -101,18 +101,18 @@ const Step3Visual: React.FC = () => (
   <div className="space-y-3">
     <div className="bg-red-50 p-4 rounded-lg border border-red-200 text-sm text-red-800 space-y-3">
       <p className="font-semibold">If F were absolutely continuous (AC):</p>
-      <BlockMath math="F(1) - F(0) = \int_0^1 F'(x)\,dx" />
+      <BlockMath math="F(1) - F(0) = \\int_0^1 F'(x)\\,dx" />
       <p>
         But <InlineMath math="F'(x) = 0" /> a.e., so:
       </p>
-      <BlockMath math="\int_0^1 F'(x)\,dx = \int_0^1 0\,dx = 0" />
+      <BlockMath math="\\int_0^1 F'(x)\\,dx = \\int_0^1 0\\,dx = 0" />
       <p>
-        However <InlineMath math="F(1) - F(0) = 1 - 0 = 1 \neq 0" />.
+        However <InlineMath math="F(1) - F(0) = 1 - 0 = 1 \\neq 0" />.
       </p>
     </div>
     <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200 text-sm text-indigo-800">
       <p className="font-bold mb-2">Conclusion</p>
-      <BlockMath math="\int_0^1 F' = 0 \neq 1 = F(1) - F(0)" />
+      <BlockMath math="\\int_0^1 F' = 0 \\neq 1 = F(1) - F(0)" />
       <p>
         This contradiction proves the Cantor distribution is <strong>NOT</strong> absolutely continuous.
         It has no density function <InlineMath math="f" />. It is a <strong>singular continuous</strong> distribution.

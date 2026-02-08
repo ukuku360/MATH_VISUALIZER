@@ -54,7 +54,7 @@ export const CantorSetBuilder: React.FC = () => {
     if (iteration === 0) return '1';
     const num = Math.pow(2, iteration);
     const den = Math.pow(3, iteration);
-    return `\\frac{${num}}{${den}}`;
+    return `\\\\frac{${num}}{${den}}`;
   }, [iteration]);
 
   return (
@@ -171,7 +171,7 @@ export const CantorSetBuilder: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="bg-indigo-50 p-3 rounded-lg border border-indigo-200 text-sm text-indigo-800">
           <div className="text-xs font-semibold uppercase text-indigo-500 mb-1">Remaining Length</div>
-          <InlineMath math={`\\left(\\frac{2}{3}\\right)^{${iteration}} = ${fractionLabel} \\approx ${remainLen.toFixed(6)}`} />
+          <InlineMath math={`\\\\left(\\\\frac{2}{3}\\\\right)^{${iteration}} = ${fractionLabel} \\\\approx ${remainLen.toFixed(6)}`} />
         </div>
         <div className="bg-amber-50 p-3 rounded-lg border border-amber-200 text-sm text-amber-800">
           <div className="text-xs font-semibold uppercase text-amber-500 mb-1">Remaining Intervals</div>
